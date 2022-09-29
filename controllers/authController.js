@@ -153,6 +153,7 @@ exports.isLoggedIn = async (req, res, next) => {
 };
 
 exports.restrictTo = (...roles) => {
+  // console.log(roles);
   return (req, res, next) => {
     // roles ['admin', 'lead-guide']. role='user'
     if (!roles.includes(req.user.role)) {
