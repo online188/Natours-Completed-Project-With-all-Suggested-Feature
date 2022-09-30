@@ -175,15 +175,15 @@ exports.login = catchAsync(async (req, res, next) => {
   if (!user || !(await user.correctPassword(password, user.password))) {
     return next(new AppError('Incorrect email or password', 401));
   }
-
-  if (!user.isVerified) {
-    return next(
-      new AppError(
-        'Your Email has not been verified. Please click on resend',
-        401
-      )
-    );
-  }
+  // Tạm thời comment cái này lại để login
+  // if (!user.isVerified) {
+  //   return next(
+  //     new AppError(
+  //       'Your Email has not been verified. Please click on resend',
+  //       401
+  //     )
+  //   );
+  // }
   // 3) If everything ok, send token to client
   createSendToken(user, 200, req, res);
 });

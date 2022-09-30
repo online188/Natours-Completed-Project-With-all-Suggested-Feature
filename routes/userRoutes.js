@@ -2,6 +2,7 @@ const express = require('express');
 const userController = require('./../controllers/userController');
 const authController = require('./../controllers/authController');
 const bookingRouter = require('./../routes/bookingRoutes');
+const reviewRouter = require('./../routes/reviewRoutes');
 
 const router = express.Router();
 
@@ -22,6 +23,9 @@ router.use(authController.protect);
 
 router.patch('/updateMyPassword', authController.updatePassword);
 router.get('/me', userController.getMe, userController.getUser);
+// Get Reviews of Current User: GET /users/my-reviews
+router.use('/my-reviews', reviewRouter);
+
 router.patch(
   '/updateMe',
   userController.uploadUserPhoto,
