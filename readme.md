@@ -36,22 +36,22 @@ Live demo (Feel free to visit) 👉 : https://natours14.herokuapp.com/
 * User profile
   - Update username, photo, email, and password
 * Credit card Payment
-Back end:
-  OK =>My Review API
-  OK =>/tours/:id/bookings (Get all bookings on a tour)
-  OK =>/users/:id/bookings (Get all bookings on a user)
-  OK =>Implement restriction to users review only tours they have booked
-  OK =>Confirm user email address after first creating account
-  Implement maximum login attempts
-  Implement two-factor authentication
-  Prevent duplicate bookings after user has booked that exact tour
-  Implement favourite tours
-  Implement Recently Viewed Tours
-Front end:
-  OK =>Implement a sign up form
-  Implement the "Manage" page for administrators to CRUD tours, users, reviews and bookings
-  On tour detail page allow user to add the review
-  Implement "My Review" pages (using React)
+* Back end:
+  -OK =>My Review API
+  -OK =>/tours/:id/bookings (Get all bookings on a tour)
+  -OK =>/users/:id/bookings (Get all bookings on a user)
+  -OK =>Implement restriction to users review only tours they have booked
+  -OK =>Confirm user email address after first creating account
+  -Implement maximum login attempts
+  -Implement two-factor authentication
+  -Prevent duplicate bookings after user has booked that exact tour
+  -Implement favourite tours
+  -Implement Recently Viewed Tours
+* Front end:
+  -OK =>Implement a sign up form
+  -Implement the "Manage" page for administrators to CRUD tours, users, reviews and bookings
+  -On tour detail page allow user to add the review
+  -Implement "My Review" pages (using React)
 ## Demonstration
 #### Home Page :
 ![natoursHomePageonline-video-cutt](https://user-images.githubusercontent.com/58518192/72606801-7ebe0680-3949-11ea-8e88-613f022a64e5.gif)
