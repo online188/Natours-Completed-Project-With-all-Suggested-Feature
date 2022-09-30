@@ -54,6 +54,10 @@ module.exports = class Email {
     await this.newTransport().sendMail(mailOptions);
   }
 
+  async sendConfirmEmail() {
+    await this.send('confirmation', 'Confirm your email at Natours');
+  }
+
   async sendWelcome() {
     await this.send('welcome', 'Welcome to the Natours Family!');
   }

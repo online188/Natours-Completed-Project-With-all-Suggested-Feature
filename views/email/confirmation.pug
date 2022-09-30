@@ -1,0 +1,17 @@
+extends baseEmail
+
+block content
+  p Dear #{firstName},
+  p Thanks for your registration, to complete your signup to Natours
+  p please click in this link in order to confirm yourE-mail Address:
+  table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+    tbody
+      tr
+        td(align='left')
+          table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+            tbody
+              tr
+                td
+                  a(href=`${url}`, target='_blank') Confirmation link
+  p If you need any help with booking your next tour, please don't hesitate to contact me!
+  p - Jonas Schmedtmann, CEO
