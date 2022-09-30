@@ -71,8 +71,8 @@ exports.getAll = Model =>
     let filter = {};
     if (req.params.tourId) filter = { tour: req.params.tourId };
     if (req.params.userId) filter = { user: req.params.userId };
-    if (req.user.id) filter = { user: req.user.id };
-
+    if (req.params.id) filter = { user: req.params.id };
+    console.log(req.params.id);
     const features = new APIFeatures(Model.find(filter), req.query)
       .filter()
       .sort()

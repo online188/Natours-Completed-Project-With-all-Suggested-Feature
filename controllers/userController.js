@@ -1,6 +1,7 @@
 const multer = require('multer');
 const sharp = require('sharp');
 const User = require('./../models/userModel');
+const Reviews = require('./../models/reviewModel');
 const catchAsync = require('./../utils/catchAsync');
 const AppError = require('./../utils/appError');
 const factory = require('./handlerFactory');
@@ -105,6 +106,7 @@ exports.createUser = (req, res) => {
 
 exports.getUser = factory.getOne(User);
 exports.getAllUsers = factory.getAll(User);
+exports.getAllReviewOfUser = factory.getAll(Reviews);
 
 // Do NOT update passwords with this!
 exports.updateUser = factory.updateOne(User);
